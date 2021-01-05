@@ -29,7 +29,7 @@ export class BlogCommentComponent implements OnInit {
       if(res.success){
         this.list_comment =  res.list_comment;
       }else {
-        this.messageService.messagesNotifyErr("Sever Error ne hahahaha!",'Notify');
+        this.messageService.messagesNotifyErr("Sever Error!",'Notify');
       }
     });
   }
