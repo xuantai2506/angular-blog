@@ -27,7 +27,7 @@ export class BlogCommentComponent implements OnInit {
     this.comment = "";
     this.blogService.getCommentMain(this.data).subscribe(res => {
       if(res.success){
-        this.list_comment = res.list_comment;
+        this.list_comment =  res.list_comment;
       }else {
         this.messageService.messagesNotifyErr("Sever Error !",'Notify');
       }
