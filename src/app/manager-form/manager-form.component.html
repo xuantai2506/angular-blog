@@ -1,0 +1,85 @@
+<app-top-header></app-top-header>
+<section>
+    <div class="container">
+        <h1 style="text-align: center;margin-bottom: 20px;font-size: 40px;">Trang Người Dùng</h1>
+
+        <div class="list-blog">
+            <div class="row">
+                <div class="col-9">
+                    <form method="post" [formGroup]="blogForm" *ngIf="blogForm" (ngSubmit)="onSubmit()" enctype="multipart/form-data">
+                        <!-- field title -->
+                        <div class="form-group">
+                            <label for="">Title</label>
+                            <input 
+                                [ngClass]="{ 'is-invalid': submitted && field_blog.title.errors }"
+                                type="text" class="form-control" 
+                                formControlName="title" 
+                                required 
+                                placeholder="Enter Title">
+                            <!-- Error Title -->
+                            <div *ngIf="submitted && field_blog.title.errors" class="invalid-feedback">
+                                <div *ngIf="field_blog.title.errors.required">Title is required</div>
+                            </div>
+                        </div>
+                        <!-- field name -->
+                        <div class="form-group">
+                            <label for="">Name</label>
+                            <input 
+                                [ngClass]="{ 'is-invalid': submitted && field_blog.name.errors }"
+                                type="text" class="form-control" 
+                                formControlName="name" 
+                                placeholder="Enter Name">
+                            <div *ngIf="submitted && field_blog.name.errors" class="invalid-feedback">
+                                <div *ngIf="field_blog.name.errors.required">Name is required</div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlFile1">Upload Images</label>
+                            <input type="file" class="form-control-file" formControlName="file" name="images" id="exampleFormControlFile1">
+                            <!-- <img src="https://baochinhphu.vn/Uploaded/hoangtrongdien/2019_12_27/don-vi-tu-van-dua-ra-nhieu-y-tuong-dieu-chinh-quy-hoach-chung-tp-da-nang-1643.jpg" alt=""> -->
+                        </div>
+                        <div class="form-group">
+                          <label for="exampleInputPassword1">Description</label>
+                          <input type="text" 
+                            [ngClass] = "{ 'is-invalid': submitted && field_blog.description.errors }"
+                            class="form-control" 
+                            formControlName="description" 
+                            required value="" 
+                            placeholder="Enter description">
+                            <div *ngIf="submitted && field_blog.description.errors" class="invalid-feedback">
+                                <div *ngIf="field_blog.description.errors.required">
+                                    Description is required
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Content</label>
+                            <textarea 
+                                [ngClass]="{ 'is-invalid': submitted && field_blog.Content.errors }"
+                                type="text" 
+                                id="editor" 
+                                formControlName="Content" 
+                                name="">
+                            </textarea>
+                            <div *ngIf="submitted && field_blog.Content.errors" class="invalid-feedback">
+                                <div *ngIf="field_blog.Content.errors.required">
+                                    Content is required
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary" name="submit_form">Submit</button>
+                    </form>
+                </div>
+                <div class="col-3">
+                    <div class="list-group">
+                        <a href="#" class="list-group-item list-group-item-action active">
+                          Manager
+                        </a>
+                        <a routerLink = "/manager" class="list-group-item list-group-item-action">List Blog Of Me</a>
+                        <a routerLink = "/manager/add" class="list-group-item list-group-item-action">Add New Blog</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

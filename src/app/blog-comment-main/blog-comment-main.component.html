@@ -1,0 +1,42 @@
+<div class="comments">
+    <!-- <input type="hidden" *ngIf="detail" [(ngModel)]="blog_id" value="{{detail.id}}" name=""> -->
+    <!-- comment main -->
+    <div class="comment-main main-">
+        <div class="comment comment-avatar">
+            <img src="https://cheerup.theme-sphere.com/wp-content/uploads/2016/05/bella-doe.jpg" alt="">
+        </div>
+        <div class="comment comment-content" *ngIf="comments">
+            <div class="comment-meta">
+                <span class="meta-item name">
+                    <strong>{{comments.name}}</strong><br>
+                </span>
+                <span class="meta-item reply">
+                    <a href="#" data-id="">reply</a>
+                </span>
+            </div>
+            <div class="comment-text">
+                {{comments.comment}}
+            </div>
+        </div>
+    </div>
+    <!-- reply -->
+    <!-- <div class="comment-reply">
+        <div class="comment comment-avatar">
+            <img src="https://cheerup.theme-sphere.com/wp-content/uploads/2016/05/bella-doe.jpg" alt="">
+        </div>
+        <div class="comment comment-content">
+            <div class="comment-meta">
+                <span class="meta-item name">
+                    <strong>Bella Doe</strong><br>
+                </span>
+                <span class="meta-item reply">
+                    <a href="#" data-id="1">reply</a>
+                </span>
+            </div>
+            <div class="comment-text">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis totam laboriosam beatae, iste illo inventore tenetur possimus, eveniet quos enim aliquam, pariatur excepturi. Totam eum alias, numquam nesciunt architecto suscipit.
+            </div>
+        </div>
+    </div> -->
+    
+</div>

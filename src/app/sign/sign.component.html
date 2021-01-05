@@ -1,0 +1,78 @@
+
+<!-- The Modal -->
+<div id="id01" class="modal" style="display: none;">
+
+    <!-- Modal Content -->
+    <form class="modal-content animate" method="post"
+        action="#">
+        <div class="imgcontainer">
+            <img src="media/image/img_568657.png" alt="Avatar" class="avatar">
+        </div>
+
+        <div class="container-modal">
+            <label for="uemail"><b>Email {{email}}</b></label>
+            <input type="text" placeholder="Enter Email" [(ngModel)] = "email" name="email" required>
+
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" [(ngModel)] = "password" name="password" required>
+
+            <button type="submit" (click) = 'login()' name="login">Login</button>
+            <label>
+                <input type="checkbox"  checked="checked" name="remember"> Remember me
+            </label>
+        </div>
+
+        <div class="container-modal" style="background-color:#f1f1f1">
+            <button type="button" onclick="document.getElementById('id01').style.display='none'"
+                class="cancelbtn">Cancel</button>
+            <!-- <span class="psw">Forgot <a href="#">password?</a></span> -->
+        </div>
+    </form>
+</div>
+
+<!-- The Modal REGISTER -->
+<div id="id02" class="modal" style="display: none;">
+
+    <!-- Modal Content -->
+    <form method="post" class="modal-content animate" enctype="multipart/form-data" action="#">
+
+        <div class="imgcontainer">
+            <img src="media/image/img_568657.png" alt="Avatar" class="avatar">
+        </div>
+
+        <div class="container-modal">
+            <label for="uname"><b>Email (*) {{email}} </b></label>
+            <input type="text" placeholder="Enter Email" [(ngModel)] ="email" name="email" required>
+
+            <label for="uname"><b>Username (*)</b></label>
+            <input type="text" placeholder="Enter Username" [(ngModel)] ="name" name="name" required>
+
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" [(ngModel)] ='password' name="password" required>
+
+            <label for="psw"><b>Confirm Password</b></label>
+            <input type="password" placeholder="Enter Confirm" [(ngModel)]= 'confirm' name="confirm" required>
+
+            <!-- <label for="images"><b>Images</b></label><br>
+            <input type="file" name="images" style="margin-bottom: 20px"> -->
+
+            <label for="countries"><b>Countries</b></label>
+            <select name="data[member][countries]" id="">
+                <option value="0">---Countries---</option>
+
+                <option value="1">Hà Nội</option>
+                <option value="2">Sài Gòn</option>
+            </select>
+            <button type="submit" (click) = 'register()' name="register">Register</button>
+            <label>
+                  <input type="checkbox" checked="checked" name="remember"> Remember me
+            </label>
+        </div>
+
+        <div class="container-modal" style="background-color:#f1f1f1">
+            <button type="button" onclick="document.getElementById('id02').style.display='none'"
+                class="cancelbtn">Cancel</button>
+            <!-- <span class="psw">Forgot <a href="#">password?</a></span> -->
+        </div>
+    </form>
+</div>

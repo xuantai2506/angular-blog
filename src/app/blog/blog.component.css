@@ -1,0 +1,43 @@
+/* nút like */
+section .blog-item {
+    width: 100%;
+}
+section .blog-item .like-blog {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 70px;
+    display: flex;
+    justify-content: flex-end;
+}
+section .blog-item  img{
+    margin-top: 20px;
+    width: 100%;
+}
+section .like-blog .like {
+    width: auto;
+    border-radius: 15px;
+}
+section .like-blog .number {
+    color:rgb(241, 134, 138);
+}
+section .like-blog .like a {
+    padding: 0 16px;
+}
+section .like-blog ul li {
+    list-style: none;
+    display: inline-block;
+    border: 1px solid black;
+    padding: 6px;
+    width: 30px;
+    height: 30px;
+    margin-left: 4px;
+    border-radius: 50%;
+}
+section .like-blog ul li a {
+    color: black;
+}
+section .like-blog ul li a .tsi::before{
+    font-family: 'ts-icons';
+    color: black;
+}
+/* End nút like */

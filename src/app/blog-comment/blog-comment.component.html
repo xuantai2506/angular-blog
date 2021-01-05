@@ -1,0 +1,15 @@
+<div class="comment-box">
+    <div class="comment-part">
+        <span class="number-comment"></span>
+        <span class="comment">comment</span>
+    </div>
+
+    <app-blog-comment-main *ngFor="let row of list_comment" [comments]='row'>
+    </app-blog-comment-main>
+
+    <div class="comment-main-input">
+        <form method="post" action="javascript:void(0)">
+            <input type="text" id="comment_main" name="comment" [(ngModel)]="comment" (keyup.enter)="getCommentMain()" placeholder="Nhập comment nhận xét bài viết nào">
+        </form>
+    </div>
+</div>

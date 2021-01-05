@@ -1,0 +1,41 @@
+<app-top-header></app-top-header>
+<section>
+    <div class="container">
+        <h1 style="text-align: center;margin-bottom: 20px;font-size: 40px;">Trang Người Dùng</h1>
+
+        <div class="list-blog">
+            <div class="row">
+                <div class="col-9">
+                    <table>
+                        <tr>
+                          <th>Id</th>
+                          <th>Title</th>
+                          <th>Description</th>
+                          <th>Images</th>
+                          <th>Action</th>
+                        </tr>
+                        <tr *ngFor="let row of list_blogs">
+                          <td>{{row.id}}</td>
+                          <td>{{row.title}}</td>
+                          <td>{{row.description}}</td>
+                          <td><img src="https://ariyanacentre.com/wp-content/uploads/2019/11/Developing-Night-Entertainment-In-Danang-In-2020.jpg" alt=""></td>
+                          <td>
+                            <a href="manager/edit/{{row.id}}">Edit</a>/
+                            <a (click)="postDelBlog(row.id)">Delete</a>
+                          </td>
+                        </tr>
+                      </table>
+                </div>
+                <div class="col-3">
+                    <div class="list-group">
+                        <a href="#" class="list-group-item list-group-item-action active">
+                          Manager
+                        </a>
+                        <a routerLink = "/manager" class="list-group-item list-group-item-action">List Blog Of Me</a>
+                        <a routerLink = "/manager/add" class="list-group-item list-group-item-action">Add New Blog</a>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

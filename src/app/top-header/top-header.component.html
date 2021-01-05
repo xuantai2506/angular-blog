@@ -1,0 +1,26 @@
+<header>
+    <div class="container">
+        <div class="task-bar">
+            <div class="logo">
+                <a href="#">Blog</a>
+            </div>
+            <div class="sign" *ngIf = "!checkToken">
+                <div class="sign-in">
+                    <a href="#" onclick="document.getElementById('id01').style.display='block'">Login</a>
+                </div>
+                <div class="sign-up">
+                    <a href="#" onclick="document.getElementById('id02').style.display='block'">Register</a>
+                </div>
+            </div>
+            <div class="sign" *ngIf = "checkToken">
+                <div class="sign-in">
+                    <a href="#" (click) = "logout()">Logout</a>
+                </div>
+                <div class="sign-up" *ngIf = "user">
+                    <a routerLink="/manager" >{{user.email}}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<app-sign></app-sign>

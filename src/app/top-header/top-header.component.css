@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+/* HEADER */
+header {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: rgb(90, 90, 88);
+}
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+header .task-bar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    
+    margin-bottom: 20px;
+    align-items: center;
+}
+header .task-bar .logo {
+    padding: 10px;
+    font-size: 25px;
+    color: #fff;
+}
+header .task-bar .sign {
+    display: flex;
+    justify-content: center;
+}
+header .sign .sign-in,
+header .sign .sign-up{
+    padding: 10px;
+}
+/* END HEADER */
